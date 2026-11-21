@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@achadinhosemtodaparte · Achadinhos</title><meta name="description" content="Os achadinhos dos posts, com link direto da Shopee. Procure pelo nº do post."><meta name="robots" content="noindex">
+<style>
+:root{--o:#ee4d2d;--t:#1f1d1a;--m:#6b665f;--l:#ece7e1}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f7f4f0;color:var(--t)}
+header{background:var(--o);color:#fff;padding:22px 16px 16px;text-align:center}
+header h1{margin:0;font-size:22px}header p{margin:6px 0 0;opacity:.92;font-size:14px}
+.tools{position:sticky;top:0;z-index:2;background:#f7f4f0;padding:10px 12px;border-bottom:1px solid var(--l)}
+.tools input{width:100%;padding:12px 14px;border:1px solid var(--l);border-radius:12px;font-size:16px}
+nav{display:flex;gap:8px;overflow-x:auto;padding-top:10px}nav a{white-space:nowrap;background:#fff;border:1px solid var(--l);border-radius:99px;padding:7px 12px;color:var(--t);text-decoration:none;font-size:14px}
+main{max-width:1000px;margin:0 auto;padding:6px 12px 40px}h2{font-size:18px;margin:22px 4px 10px}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.p{background:#fff;border:1px solid var(--l);border-radius:14px;padding:8px;display:flex;flex-direction:column;gap:6px}
+.ph{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;background:#f0ece6}.ph img{width:100%;height:100%;object-fit:cover}
+.n{position:absolute;left:6px;top:6px;background:#1f1d1a;color:#fff;font-weight:800;font-size:13px;padding:3px 8px;border-radius:99px}
+.off{position:absolute;right:6px;top:6px;background:#e11d48;color:#fff;font-weight:800;font-size:13px;padding:3px 8px;border-radius:99px}
+h3{font-size:14px;font-weight:600;margin:0;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
+.pr s{color:var(--m);font-size:13px}.pr b{color:var(--o);font-size:18px}
+.cp{font-size:12px;background:#fff4e5;color:#8a4b00;border:1px dashed #e8a23a;border-radius:8px;padding:4px 6px}.fs{font-size:12px;color:#1e7a4c}
+.buy{margin-top:auto;display:block;text-align:center;background:var(--o);color:#fff;text-decoration:none;font-weight:700;padding:11px;border-radius:10px}
+.empty{text-align:center;color:var(--m);padding:40px}footer{text-align:center;color:var(--m);font-size:12px;padding:20px 16px 30px;line-height:1.6}
+</style></head><body>
+<header><h1>@achadinhosemtodaparte</h1><p>Os achadinhos dos posts, com link direto da Shopee. Procure pelo nº do post.</p></header>
+<div class="tools"><input id="q" type="search" placeholder="Digite o nº do post ou o nome do produto" aria-label="Buscar produto"><nav></nav></div>
+<main><p class="empty">Novos achadinhos chegando em breve.</p><p class="empty" id="none" hidden>Nenhum produto encontrado.</p></main>
+<footer>Links de afiliado: posso receber comissão pelas compras, sem custo a mais para você.<br>Preços, cupons e estoque podem mudar a qualquer momento. Atualizado em 21/11, 12:18.</footer>
+<script>
+const q=document.getElementById('q');q.addEventListener('input',()=>{const v=q.value.trim().toLowerCase().replace(/^n[ºo°]?\s*/,'');let n=0;
+document.querySelectorAll('.p').forEach(p=>{const ok=!v||p.dataset.q.includes(v);p.hidden=!ok;if(ok)n++});
+document.querySelectorAll('section').forEach(s=>{s.hidden=![...s.querySelectorAll('.p')].some(p=>!p.hidden)});document.getElementById('none').hidden=n>0});
+</script></body></html>
